@@ -56,7 +56,7 @@ NbbmGenerator.prototype.app = function app() {
   this.write('app/templates/dummy.html','');
   this.mkdir('app/base');
   this.mkdir('app/config');
-  //this.template('index.html','app/index.html');
+  this.template('index.html','app/index.html');
   this.indexFile = this.readFileAsString(path.join(this.sourceRoot(), 'index.html'));
   this.indexFile = this.engine(this.indexFile, this);
 
