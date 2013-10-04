@@ -1,5 +1,11 @@
 {
   "name": "<%= _.slugify(appname) %>",
   "version": "0.0.0",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-jst": "~0.5.1",
+    "grunt-contrib-less": "~0.7.0"
+  }
 }
