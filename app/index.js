@@ -82,12 +82,14 @@ NbbmGenerator.prototype.app = function app() {
   this.copy('config.renderer.js','app/config/marionette/renderer.js');
   this.template('_collection.js','app/base/collection.js');
   this.template('_model.js','app/base/model.js');
+  this.template('_controller.js','app/base/controller.js');
   this.template('app.js','app/app.js')
   var appJS = [
     'config/marionette/application.js',
     'config/marionette/renderer.js',
     'templates.js',
-    'app.js'
+    'app.js',
+    'base/controller.js'
   ];
   
   this.indexFile = this.appendScripts(this.indexFile, 'scripts/app.js', appJS);
