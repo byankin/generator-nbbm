@@ -23,7 +23,7 @@ ViewGenerator.prototype.askFor = function askFor() {
    this._.forEach(modules, function(module, index){
      results[index] = classify(module);
    });
-   var views = [];
+   var views = [''];
    var files = glob.sync("app/apps/**/*.js");
    this._.forEach(files, function(file){
      var string = this.readFileAsString(file);
@@ -38,12 +38,8 @@ ViewGenerator.prototype.askFor = function askFor() {
        },this);
      }
      
-//     /console.log(result);
    }, this);
-   //this.readFileAsString(path.join(this.sourceRoot(), 'view.js'));
-     // console.log(files);
-    
-   //modules = this._.invoke(modules, classify);
+
    var prompts = [/*{
      type: 'list',
      name: 'moduleName',
